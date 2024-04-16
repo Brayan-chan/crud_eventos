@@ -1,15 +1,5 @@
 <?php
 
-/**
- * CRUD modal en PHP y MySQL
- * 
- * Este archivo elimina el registro y la imagen
- * @author MRoblesDev
- * @version 1.0
- * https://github.com/mroblesdev
- * 
- */
-
 session_start();
 
 require 'config/database.php';
@@ -34,3 +24,5 @@ if ($conn->query($sql)) {
 }
 
 header('Location: index.php');
+
+?>
