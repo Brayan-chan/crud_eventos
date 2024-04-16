@@ -15,9 +15,9 @@ session_start();
 
 require 'config/database.php';
 
-$sqlPeliculas = "SELECT p.id, p.nombre, p.descripcion, g.nombre AS genero FROM pelicula AS p
+$sqlEventos = "SELECT p.id, p.nombre, p.descripcion, g.nombre AS genero FROM evento AS p
 INNER JOIN genero AS g ON p.id_genero=g.id";
-$peliculas = $conn->query($sqlPeliculas);
+$eventos = $conn->query($sqlEventos);
 
 $dir = "posters/";
 
@@ -40,7 +40,7 @@ $dir = "posters/";
 
     <div class="container py-3">
 
-        <h2 class="text-center">Peliculas</h2>
+        <h2 class="text-center">Eventos</h2>
 
         <hr>
 
@@ -74,7 +74,7 @@ $dir = "posters/";
             </thead>
 
             <tbody>
-                <?php while ($row = $peliculas->fetch_assoc()) { ?>
+                <?php while ($row = $eventos->fetch_assoc()) { ?>
                     <tr>
                         <td><?= $row['id']; ?></td>
                         <td><?= $row['nombre']; ?></td>
@@ -144,7 +144,7 @@ $dir = "posters/";
             let inputGenero = editaModal.querySelector('.modal-body #genero')
             let poster = editaModal.querySelector('.modal-body #img_poster')
 
-            let url = "getPelicula.php"
+            let url = "getEvento.php"
             let formData = new FormData()
             formData.append('id', id)
 

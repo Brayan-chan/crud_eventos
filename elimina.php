@@ -16,7 +16,7 @@ require 'config/database.php';
 
 $id = $conn->real_escape_string($_POST['id']);
 
-$sql = "DELETE FROM pelicula WHERE id=$id";
+$sql = "DELETE FROM evento WHERE id=$id";
 if ($conn->query($sql)) {
 
     $dir = "posters";
