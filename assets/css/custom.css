@@ -1,0 +1,112 @@
+#preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    z-index: 1000;
+    display: none;
+}
+
+th {
+    text-align: center;
+}
+
+a.btn {
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+#preview img {
+    width: auto;
+    height: auto;
+    max-width: 200px; /* Añadido para limitar el ancho máximo de la imagen */
+    max-height: 200px; /* Añadido para limitar la altura máxima de la imagen */
+}
+
+footer a {
+    text-decoration: none; /* Añadido para eliminar el subrayado del enlace en el pie de página */
+}
+
+@media screen and (max-width: 1000px) {
+    table {
+        border: 10px;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 10px;
+    }
+
+    td {
+        display: block;
+        text-align: left;
+        font-size: 13px;
+        border-bottom: 0;
+    }
+
+    td:last-child {
+        border-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    td#id {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+    }
+
+    td#nombre {
+        font-weight: bold;
+    }
+
+    td#poster {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    td#poster img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+        border: 3px solid black;
+    }
+
+    td#genero {
+        font-weight: bold;
+    }
+
+    td#acciones {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 10px;
+    }
+
+    a.btn {
+        margin: 5px; 
+        border-radius: 10px;
+    }
+
+    td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+    td:last-child {
+        border-bottom: 0;
+    }
+}
