@@ -24,7 +24,11 @@ $dir = "posters/";
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/navegador.css">
 </head>
+<nav>
+    <a id="atras" class="h-10" href="views/user.php"><i class="fa-solid fa-arrow-left"></i></a>
+</nav>
 
 <body class="d-flex flex-column h-100">
 

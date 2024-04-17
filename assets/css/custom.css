@@ -5,8 +5,20 @@
     transform: translate(-50%, -50%);
     max-width: 90%;
     max-height: 90%;
-    z-index: 1000;
+    z-index: 10;
     display: none;
+}
+
+a#atras {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    padding: 5px;
+    display: inline-block;
+}
+
+a#atras:hover {
+    color: #007bff;
 }
 
 th {

@@ -1,0 +1,26 @@
+nav {
+    background-color: #f8f9fa; /* Cambia el color de fondo del navegador */
+    padding: 10px; /* Añade un poco de espacio alrededor del contenido del navegador */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina los marcadores de lista */
+    margin: 0; /* Elimina los márgenes */
+    padding: 0; /* Elimina el relleno */
+    display: flex; /* Alinea los elementos de la lista horizontalmente */
+    justify-content: space-around; /* Distribuye los elementos de la lista uniformemente a lo largo del eje horizontal */
+}
+
+nav ul li {
+    margin: 0 10px; /* Añade un poco de espacio a los lados de cada elemento de la lista */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #333; /* Cambia el color de los enlaces */
+    font-size: 20px; /* Cambia el tamaño de la fuente de los enlaces */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Cambia el color de los enlaces cuando se pasa el cursor sobre ellos */
+}
