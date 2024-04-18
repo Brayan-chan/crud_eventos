@@ -45,6 +45,6 @@ if ($conn->query($sql)) {
 }
 
 
-header('Location: index.php');
+header('Location: eventos.php');
 
 ?>

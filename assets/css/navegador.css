@@ -1,26 +1,106 @@
 nav {
-    background-color: #f8f9fa; /* Cambia el color de fondo del navegador */
-    padding: 10px; /* Añade un poco de espacio alrededor del contenido del navegador */
+    background-color: #f8f9fa;
+    /* Cambia el color de fondo del navegador */
+    padding: 10px;
+    /* Añade un poco de espacio alrededor del contenido del navegador */
 }
 
 nav ul {
-    list-style-type: none; /* Elimina los marcadores de lista */
-    margin: 0; /* Elimina los márgenes */
-    padding: 0; /* Elimina el relleno */
-    display: flex; /* Alinea los elementos de la lista horizontalmente */
-    justify-content: space-around; /* Distribuye los elementos de la lista uniformemente a lo largo del eje horizontal */
+    list-style-type: none;
+    /* Elimina los marcadores de lista */
+    margin: 0;
+    /* Elimina los márgenes */
+    padding: 0;
+    /* Elimina el relleno */
+    display: flex;
+    /* Alinea los elementos de la lista horizontalmente */
+    justify-content: space-around;
+    /* Distribuye los elementos de la lista uniformemente a lo largo del eje horizontal */
 }
 
 nav ul li {
-    margin: 0 10px; /* Añade un poco de espacio a los lados de cada elemento de la lista */
+    margin: 0 10px;
+    /* Añade un poco de espacio a los lados de cada elemento de la lista */
 }
 
 nav ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #333; /* Cambia el color de los enlaces */
-    font-size: 20px; /* Cambia el tamaño de la fuente de los enlaces */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: #333;
+    /* Cambia el color de los enlaces */
+    font-size: 20px;
+    /* Cambia el tamaño de la fuente de los enlaces */
 }
 
 nav ul li a:hover {
-    color: #007bff; /* Cambia el color de los enlaces cuando se pasa el cursor sobre ellos */
+    color: #007bff;
+    /* Cambia el color de los enlaces cuando se pasa el cursor sobre ellos */
+}
+
+@media screen and (max-width: 1000px) {
+    table {
+        border: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 12px;
+        text-align: center;
+        border-collapse: collapse;
+        border-spacing: 10px;
+        border-bottom-right-radius: 30px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 10px;
+    }
+
+    td {
+        display: block;
+        text-align: left;
+        font-size: 13px;
+        border-bottom: 0;
+    }
+
+    td:last-child {
+        border-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    td#bold {
+        font-weight: bold;
+    }
+
+    a.btn#editar,
+    a.btn#eliminar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 120px;
+        margin-top: 10px;
+        margin-right: 120px;
+        border-radius: 50px;
+    }
+
+    td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+    td:last-child {
+        border-bottom: 0;
+    }
 }

@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 require '../config/database.php';
 
 ?>
@@ -12,8 +11,7 @@ require '../config/database.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registros</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
-    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/es.css">
     <link rel="stylesheet" href="../assets/css/navegador.css">
 </head>
@@ -51,14 +49,14 @@ require '../config/database.php';
                     while ($fila = mysqli_fetch_array($dato)) {
                 ?>
                     <tr>
-                        <td><?php echo $fila['nombre']; ?></td>
-                        <td><?php echo $fila['correo']; ?></td>
-                        <td><?php echo $fila['password']; ?></td>
-                        <td><?php echo $fila['telefono']; ?></td>
-                        <td><?php echo $fila['fecha']; ?></td>
-                        <td>
-                            <a class="btn btn-warning" href="editar_user.php?id=<?php echo $fila['id']; ?>">Editar</a>
-                            <a class="btn btn-danger" href="#?id='<?php echo $fila['id']; ?>">Eliminar</a>
+                        <td id="bold"><?php echo $fila['nombre']; ?></td>
+                        <td id="bold"><?php echo $fila['correo']; ?></td>
+                        <td id="bold"><?php echo $fila['password']; ?></td>
+                        <td id="bold"><?php echo $fila['telefono']; ?></td>
+                        <td id="bold"><?php echo $fila['fecha']; ?></td>
+                        <td id="acciones">
+                            <a class="btn btn-warning" id="editar" href="../views/editar_user.php?id=<?php echo $fila['id']; ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a class="btn btn-danger" id="eliminar" href="../views/eliminar_user.php?id='<?php echo $fila['id']; ?>"><i class="fa-solid fa-trash"></i></a>
                         </td>
                     </tr>
                 <?php
@@ -76,6 +74,6 @@ require '../config/database.php';
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
-    <script src="../js/user.js"></script>
+    <script src="../assets/js/user.js"></script>
 </body>
 </html>
